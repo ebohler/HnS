@@ -206,6 +206,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.wfowler1.unity3d-bsp-importer": {
+      "version": "https://github.com/wfowler1/Unity3D-BSP-Importer.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "800c5f21c6c1930bf80b934f09aa2c4ea01fbd8c"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

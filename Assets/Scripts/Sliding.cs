@@ -11,18 +11,17 @@ public class Sliding : MonoBehaviour
     private PlayerMovement pm;
 
     [Header("Sliding")]
-    public float maxSlideTime;
-    public float slideForce;
+    public float maxSlideTime = 0.75f;
+    public float slideForce = 200f;
     private float slideTimer;
 
-    public float slideYScale;
+    public float slideYScale = 0.5f;
     private float startYScale;
 
     [Header("Input")]
     public KeyCode slideKey = KeyCode.LeftControl;
     private float horizontalInput;
     private float verticalInput;
-
 
     private void Start()
     {
@@ -50,7 +49,7 @@ public class Sliding : MonoBehaviour
             SlidingMovement();
     }
 
-    private void StartSlide()
+    public void StartSlide()
     {
         pm.sliding = true;
 
@@ -64,25 +63,29 @@ public class Sliding : MonoBehaviour
     {
         Vector3 inputDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        // Sliding normal
-        if(!pm.OnSlope() || rb.velocity.y > -0.1f)
+        // sliding normal
+        if (!pm.OnSlope() || rb.velocity.y > -0.1f)
         {
-            rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Force);
-
             slideTimer -= Time.deltaTime;
+
+            rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Force);
         }
 
-        // Sliding down a slope
+        // sliding down a slope
         else
         {
             rb.AddForce(pm.GetSlopeMoveDirection(inputDirection) * slideForce, ForceMode.Force);
+
+            // does that make any difference?
+            // if (rb.velocity.y > 0) rb.AddForce(Vector3.down * 80f, ForceMode.Force);
         }
 
+        // stop sliding again
         if (slideTimer <= 0)
             StopSlide();
     }
 
-    private void StopSlide()
+    public void StopSlide()
     {
         pm.sliding = false;
 
