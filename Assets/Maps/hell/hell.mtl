@@ -1,0 +1,120 @@
+# rock_01
+newmtl material_0
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_0.tga
+
+# ground_01
+newmtl material_1
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_1.tga
+
+# ground_02
+newmtl material_2
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_2.tga
+
+# ground_04
+newmtl material_3
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_3.tga
+
+# ground_03
+newmtl material_4
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_4.tga
+
+# helldoor
+newmtl material_5
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_5.tga
+
+# scroll_lava
+newmtl material_6
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_6.tga
+
+# decal_09
+newmtl material_7
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_7.tga
+
+# rock_02
+newmtl material_8
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_8.tga
+
+# decal_06
+newmtl material_9
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_9.tga
+
+# decal_08
+newmtl material_10
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_10.tga
+
+# decal_01
+newmtl material_11
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_11.tga
+
+# decal_05
+newmtl material_12
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_12.tga
+
+# decal_07
+newmtl material_13
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_13.tga
+
+# stoneblock_01
+newmtl material_14
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_14.tga
+
+# stoneblock_03
+newmtl material_15
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_15.tga
+
+# stoneblock_02
+newmtl material_16
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_16.tga
+
+# lavahell
+newmtl material_17
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_17.tga
+
+# {ladder1
+newmtl material_18
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_18.tga
+
+# pillar
+newmtl material_19
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd hell_material_19.tga
+
