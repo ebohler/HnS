@@ -66,7 +66,9 @@ public class Sliding : MonoBehaviour
         // sliding normal
         if (!pm.OnSlope() || rb.velocity.y > -0.1f)
         {
-            slideTimer -= Time.deltaTime;
+            if (pm.grounded) {
+                slideTimer -= Time.deltaTime;
+            }
 
             rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Force);
         }
@@ -75,6 +77,8 @@ public class Sliding : MonoBehaviour
         else
         {
             rb.AddForce(pm.GetSlopeMoveDirection(inputDirection) * slideForce, ForceMode.Force);
+
+            slideTimer = maxSlideTime;
 
             // does that make any difference?
             // if (rb.velocity.y > 0) rb.AddForce(Vector3.down * 80f, ForceMode.Force);
