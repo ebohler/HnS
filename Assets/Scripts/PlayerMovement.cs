@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed;
     public float sprintSpeed;
     public float slideSpeed;
+    public float grappleSpeed;
 
     public float speedIncreaseMultiplier;
     public float slopeIncreaseMultiplier;
@@ -54,10 +55,12 @@ public class PlayerMovement : MonoBehaviour
         walking,
         sprinting,
         sliding,
+        grappling,
         air
     }
 
     public bool sliding;
+    public bool grappling;
 
     public TextMeshProUGUI text_speed;
     public TextMeshProUGUI text_mode;
@@ -126,6 +129,13 @@ public class PlayerMovement : MonoBehaviour
                 desiredMoveSpeed = sprintSpeed;
         }
 
+        // Mode - Grappling
+        else if (grappling)
+        {
+            state = MovementState.grappling;
+            desiredMoveSpeed = grappleSpeed;
+        }
+
         // Mode - Sprinting
         else if (grounded && Input.GetKey(sprintKey))
         {
@@ -191,6 +201,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
+        if (grappling) return;
+
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
